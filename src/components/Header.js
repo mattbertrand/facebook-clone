@@ -19,12 +19,13 @@ function Header() {
                 <img src="https://1000logos.net/wp-content/uploads/2016/11/fb-logo.jpg" alt="facebook-logo"/>
                 <div className="header__input">
                     <SearchIcon />
-                    <input type="text"></input>
+                    <input placeholder="Search Facebook" type="text"></input>
                 </div>
             </div>
 
-            <div className="header__middle">
-                <div className="header__option">
+            <div className="header__center">
+                <div className="header__option 
+                header__option--active">
                     <HomeIcon fontSize="large" />
                 </div>
                 <div className="header__option">
@@ -46,7 +47,7 @@ function Header() {
                     <Avatar />
                     <h4>Matthieu Bertrand</h4>
                 </div>
-                
+
                     <IconButton>
                         <AddIcon />
                     </IconButton>
