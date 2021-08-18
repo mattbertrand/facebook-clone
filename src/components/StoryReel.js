@@ -25,6 +25,11 @@ function StoryReel() {
             profileSrc="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.18169-9/28166526_1589987047788525_2102616087523548806_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=NrjJjl_KiV0AX9T5XkS&tn=pqbk6lAY3_AluJm5&_nc_ht=scontent-sjc3-1.xx&oh=8c0158176adf55fa35899541438ac430&oe=61401D42"
             title="Kimberly Kingsbury"
             />
+            <Story 
+            image="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/61757204_10219400069890413_9009800703547277312_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=e3f864&_nc_ohc=SV1-1Ou5OdMAX9Br3Wt&tn=pqbk6lAY3_AluJm5&_nc_ht=scontent-sjc3-1.xx&oh=f2bcc9d4d988393caa786004e400c469&oe=61413D84"
+            profileSrc="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/81532569_10221333006932631_4348862912157188096_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=zXTypRYQdPUAX-VZlEn&tn=pqbk6lAY3_AluJm5&_nc_ht=scontent-sjc3-1.xx&oh=ba51b30fe0e15f707b09a5d4833169a9&oe=614369C7"
+            title="Elodie Vignaud"
+            />
         </div>
     )
 }
