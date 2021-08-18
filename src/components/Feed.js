@@ -1,28 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/Feed.css';
 import StoryReel from './StoryReel';
 import MessageSender from './MessageSender';
 import Post from './Post';
+import db from '../firebase';
 
 function Feed() {
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        db.collection('posts').onSnapshot((snapshot) =>
+            setPosts(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() })))
+        )
+    }, []);
+
     return (
         <div className="feed">
             <StoryReel />
             <MessageSender />
-
-            <Post 
-            profilePic="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/38144352_10156663207947360_8248451771043676160_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=w9AjAf5YZjAAX9kquoM&_nc_ht=scontent-sjc3-1.xx&oh=f8f3d45b3a61edf9a7143da9409fe430&oe=6142054B"
-            message="Wow this works"
-            timestamp="1 day ago"
-            username="Matt Bertrand"
-            image="https://blog-www.pods.com/wp-content/uploads/2021/03/resized_FI_Getty_San-Francisco-CA-1.jpg"
-            />
-            <Post 
-            profilePic="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/38144352_10156663207947360_8248451771043676160_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=w9AjAf5YZjAAX9kquoM&_nc_ht=scontent-sjc3-1.xx&oh=f8f3d45b3a61edf9a7143da9409fe430&oe=6142054B"
-            message="Wow this works"
-            timestamp="1 day ago"
-            username="Matt Bertrand"
-            />
+            {posts.map(post => (
+                <Post 
+                key={post.data.id}
+                profilePic={post.data.profilePic}
+                message={post.data.message}
+                timestamp={post.data.timestamp}
+                username={post.data.username}
+                image={post.data.image}
+                />
+            ))}
         </div>
     )
 }
