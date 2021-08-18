@@ -19,7 +19,7 @@ function MessageSender() {
                 <form>
                     <input
                     className="messageSender__input" 
-                    placeholder="What's on tour mind?"
+                    placeholder="What's on your mind?"
                     />
                     <input 
                     placeholder="image URL (Optional"
